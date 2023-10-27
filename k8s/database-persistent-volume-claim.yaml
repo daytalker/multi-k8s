@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: database-persistent-volume-claim
+spec:
+  accessModes:
+    - ReadWriteOnce #only one Node can read/write to this Volume (ReadWriteMany, ReadOnlyMany)
+  resources:
+    requests:
+      storage: 2Gi
